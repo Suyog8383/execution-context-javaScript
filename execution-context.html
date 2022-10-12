@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  console.log({ b });
+  console.log({ a });
+  console.log({ c });
+  let a = 10; //Cannot access 'a' before initialization
+  var b = 20;
+  const c = 30; //Cannot access 'c' before initialization
+
+  let uName = "ankit";
+  let emailId = "xdankitjain@gmail.com";
+  const sum = 20 + 30;
+
+  tryMe();
+
+  function tryMe() {
+    let a = 10;
+    let b = 30;
+    let c = a + b;
+    console.log(c);
+    return c;
+  }
+
+  const a1 = "Rahul";
+
+  function a11() {
+    var a = 10;
+    function a111() {
+      var a = 10;
+      function a333() {
+        var a = 10;
+        console.log("a333 is going out");
+      }
+      a333();
+
+      console.log("a111 is going out");
+    }
+    a111();
+
+    console.log("a11 is going out");
+  }
+
+  a11();
+
+  function tryMe() {
+    console.log("I'm tryMe function");
+  }
+
+  function tryMe2() {
+    console.log("I'm tryMe2 function");
+  }
+
+  tryMe();
+  tryMe2();
+
+  tryMe();
+  tryMe2();
+
+  function tryMe() {
+    console.log("I'm tryMe function");
+  }
+
+  function tryMe2() {
+    console.log("I'm tryMe2 function");
+  }
+
+  const funOne = () => {
+    console.log("I'm run FunOne");
+  };
+
+  funOne();
+
+  /**--------------------------- */
+  funOne(); // Cannot access 'funOne' before initialization {Arrow function}
+
+  const funOne = () => {
+    console.log("I'm run FunOne");
+  };
+
+  var funOne = () => {
+    console.log("I'm run FunOne");
+  };
+
+  function addNum(a, b) {
+    const result = a + b;
+    console.log(result);
+    return result;
+  }
+
+  const sum = addNum(10, 89);
+  console.log({ sum });
+</script>
